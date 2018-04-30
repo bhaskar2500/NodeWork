@@ -1,0 +1,19 @@
+search records from the table ..
+
+1. Use a filter from prime -ng - Done
+2. Two approaches for sending data from app to user
+local  template value -
+3. Pass the clicked app id to service  and get the appdata to show on User screen for owner .
+Approach
+onclick of the link either hardcode the data  to send .
+or just 
+Add users and remove users using particular appid .
+
+create a input template  for search field to narrow down .
+
+
+
+
+
+
+

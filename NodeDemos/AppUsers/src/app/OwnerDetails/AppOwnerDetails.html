@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+
+<!--<input type="button" id="coolButton" value="Click" (click)="addServerElements() "/>-->
+
+<h3 class="first">Addons</h3>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">App</span>
+            <input type="text" pInputText placeholder="App Name" [(ngModel)]="application">         
+        </div>
+    </div>
+    
+            
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Owner" [(ngModel)]="owner" >      
+        </div>
+    </div>
+</div>
+    
+<p-button label="Add Application" styleClass="ui-button-success" (onClick)="addApplication()"></p-button>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<p-table  #tt [columns]="cols" [value]="appData">
+    <ng-template pTemplate="caption">
+        <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+        <input type="text" pInputText size="50" placeholder="Global Filter" (input)="tt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+    </ng-template>
+    <ng-template pTemplate="header">
+     <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+     </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-app>
+        <tr>
+           <a routerLink="{{ app.appID }}" > <td>{{app.appID}}</td> </a>
+            <td>{{app.appName}}</td>
+            <td >{{app.owner}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<router-outlet> </router-outlet>

@@ -1,0 +1,23 @@
+<router-outlet> </router-outlet>
+
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+
+<!--<input type="button" id="coolButton" value="Click" (click)="addServerElements() "/>-->
+
+<p-table [value]="appData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>AppID</th>
+            <th>AppName</th>
+            <th>Owner</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-app>
+        <tr>
+           <a routerLink="Owner/{{ app.appID }}"> <td>{{app.appID}}</td> </a>
+            <td>{{app.appName}}</td>
+            <td>{{app.owner}}</td>
+        </tr>
+    </ng-template>
+</p-table>

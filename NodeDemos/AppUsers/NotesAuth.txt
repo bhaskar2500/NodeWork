@@ -1,0 +1,78 @@
+why unit testing should  be done . ?
+
+
+
+
+Main componenets - 
+Frameworks used .
+Structure of each test case .
+dummy 
+
+TestBed .
+
+The TestBed creates a dynamically-constructed Angular test module that emulates an Angular @NgModule. All the modules, componenets and services and other dependecis will go in here .
+
+As it is being construceted dynamically we need an async approach .
+
+beforeEach
+Most test suites in this guide call beforeEach() to set the preconditions for each it() test and rely on the TestBed to create classes and inject services.
+
+There's another school of testing that never calls beforeEach() and and prefers to create classes explicitly rather than use the TestBed.
+
+
+
+types
+
+
+
+
+
+1. create a login component. 
+
+Add input field and button .
+
+go to sevice to get the auth data using username and password .
+
+
+
+
+/**                                             **/                
+**************** Passport JS  - ****************
+**/                                             **/
+Passport is easily configured into any Express application just like we conigure other Express middlewere like body-parser,session-checker. 
+
+Authenticate the routes .
+
+
+
+The second parameter is the type of strategy that you want to create, here we use the username-password or the LocalStrategy.
+ The passReqToCallback config variable allows us to access the request object in the callback,
+  thereby enabling us to use any parameter associated with the request.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

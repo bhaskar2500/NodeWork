@@ -1,0 +1,14 @@
+
+<button  class="btn btn-danger" id="coolButton" value="Remove" (click)="onDestroyFirst() ">Remove</button>
+<button pButton styleClass="ui-button-success"  id="coolButton" value="Add" (click)="addSourceElements() ">Add</button>
+<!--<p-button label="Click" styleClass="ui-button-info"></p-button>-->
+
+<input type="text" id="coolText"/>
+
+
+<appOwner *ngFor ="let srcEl of srcElements" [srcElement]="srcElement" [name]="textElements" >
+    
+     </appOwner>
+
+
+

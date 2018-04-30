@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
+            
+            
+            
+<div *ngFor="let record of appData">
+AppName -  <b> {{ record.appName }}</b>
+<br/>
+Owner - <b> {{ record.owner }} </b>
+<br/>
+</div>
+
+<br/>
+<br/>
+<div class="ui-g ui-fluid">
+            
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Owner" [(ngModel)]="userName" >      
+        </div>
+    </div>
+</div>
+    
+<p-button label="Remove" (onClick)="removeData($event)" styleClass="ui-button-danger" icon="fa-check" iconPos="right" ></p-button>
+<p-button label="Add" (onClick)="addData($event)"  styleClass="ui-button-success" icon="fa-check" iconPos="right" ></p-button>
+
+
+<p-table [value]="userData" [style]="{'width':'400px'}"   >
+    <ng-template pTemplate="caption">
+        Users
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>UserID</th>
+            <th>UserName</th>
+            <th>Date</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>    
+       <td>{{user.userID}}</td> 
+            <td>{{user.userName}}</td>
+            <td>{{user.date}}</td>
+        </tr>
+    </ng-template>
+</p-table>
